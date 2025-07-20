@@ -6,7 +6,7 @@ ENV RAILS_ENV=development \
     NODE_ENV=development
 
 # Set working directory
-WORKDIR /app
+WORKDIR /tearHub
 
 # Install dependencies
 RUN apt-get update -qq && \
