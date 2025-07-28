@@ -1,2 +1,21 @@
 <h1>Seth's Registration Page</h1>
 <p>Welcome to the registration page for Seth!</p>
+
+
+<%= form_with model: @user, url: registration_seth_path do |form| %>
+<div class="mb-3">
+    <%= form.label :email, "Email Address", class: "form-label" %>
+    <%= form.text_field :email, class:"form-control", placeholder: "Enter your email" %>
+</div>
+<div class="mb-3">
+    <%= form.label :password, "Password", class: "form-label" %>
+    <%= form.password_field :password, class:"form-control", placeholder: "Enter your password" %>
+</div>
+<div class="mb-3">
+    <%= form.label :password_confirmation, "Confirm Password", class: "form-label" %>
+    <%= form.password_field :password_confirmation, class:"form-control", placeholder: "Confirm your password" %>
+</div>
+<div class="mb-3">
+    <%= form.submit "Register", class: "btn btn-primary" %>
+</div>
+<% end %>
